@@ -1,16 +1,23 @@
+# JavaScript + HTML + CSS
 # React + Vite
+# Сборка apk Nitron
+БЮДЖЕТНЫЙ ТРЕКЕР - это личное веб-приложение для планирования и мониторинга ежедневного бюджета, собранное в APK
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Вас встречает блок "Начало месяца"
+Для начала выберите период времени, на который планируете бюджет. Это делается с помощью календаря в 2 клика: Выбрать начальную дату и выбрать конечную дату.
+После этого введите сумму, которую планируете на выбранный промежуток времени.
+ВНИМАНИЕ! Сумму можно выбрать на месяц и на день. Выбирайте как вам удобно.
+После этого нажмите на кнопку "Начать месяц"
 
-Currently, two official plugins are available:
+Дальше вас встретит дашборд, с помощью которого можно мониторить и управлять бюджетом.
+НА КАРТЕ - Это то, сколько у вас денег осталось на выбранный промежуток.
+БЮДЖЕТ НА ДЕНЬ - Это сумма, которую, в идеале, бы не должны превышать в 1 день. Она рассчитывается в начале "месяца" и не изменяется.
+ДОСТУПНО - Это то, сколько вам доступно денег в данный момент. Каждый день к этому значению прибавляется БЮДЖЕТ НА МЕСЯЦ. Пример: у вас на сегодня была 1000р, а осталось 300р, значит завтра вам будет доступно 1300р. Всё просто. (Не паникуйте, если это значение стало отрицательным, это значит, что вам просто нужно немного поэкономить)
+ПОТРАЧЕНО СЕГОДНЯ - Собственно то, сколько вы потратили сегодня. Всё логично.
+ОСТАЛОСЬ НА ДЕНЬ - Показывает, сколько вам в идеале ещё можно сегодня потратить. Высчитывается как БЮДЖЕТ НА ДЕНЬ - ПОТРАЧЕНО СЕГОДНЯ.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Ниже есть панель, с помощью которой вы можете управлять деньгами. Пишете значение в поле и жмёте на кнопку! Всё просто. И да, тут есть категории трат. Рекомендую ими пользоваться.
 
-## React Compiler
+Кнопка ЗАВЕРШИТЬ ДЕНЬ перестывает день вперёд, а ЗАВЕРШИТЬ МЕСЯЦ полностью завершает выбранный период.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Статистика - По нажатию на кнопку справа от заголовка дашборда.
