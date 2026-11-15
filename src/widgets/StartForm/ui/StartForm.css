@@ -1,0 +1,11 @@
+.form__field {
+    margin-bottom: 1.25rem;
+}
+
+.form__field label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+}

@@ -1,0 +1,187 @@
+.stats-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.stats-menu {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease-out;
+    padding-bottom: 4rem;
+}
+
+.stats-menu__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background: var(--card-bg);
+    z-index: 10;
+}
+
+.stats-menu__header h2 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.stats-menu__close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.stats-menu__close:hover {
+    color: var(--color-red);
+}
+
+.stats-menu__content {
+    padding: 1.5rem;
+}
+
+/* ====== КАЛЕНДАРЬ ====== */
+.stats-calendar-preview {
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.readonly-calendar {
+    width: 100% !important;
+}
+
+.readonly-calendar .rdrDay {
+    pointer-events: none;
+}
+
+.readonly-calendar .rdrDay:hover .rdrDayNumber span {
+    background-color: transparent;
+    color: inherit;
+}
+
+.readonly-calendar .rdrSelected,
+.readonly-calendar .rdrInRange,
+.readonly-calendar .rdrStartEdge,
+.readonly-calendar .rdrEndEdge {
+    background-color: var(--color-blue) !important;
+    color: #fff !important;
+}
+
+.readonly-calendar .rdrDayPassive .rdrDayNumber span {
+    color: #d1d5db;
+}
+
+.stats-charts {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.donut-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donut-chart__title {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.donut-chart__circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.donut-chart__inner {
+    width: 110px;
+    height: 110px;
+    background-color: var(--card-bg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.donut-chart__total {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.donut-chart__legend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-main);
+    justify-content: space-between;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.legend-text {
+    flex: 1;
+}
+
+/* ====== АНИМАЦИИ ====== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

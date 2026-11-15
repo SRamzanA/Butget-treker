@@ -1,0 +1,62 @@
+.budgetType__container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.budgetType__trigger {
+    width: 100%;
+    height: 2.5rem;
+    background-color: #fafafa;
+    justify-content: space-between;
+    text-align: left;
+    font-family: inherit;
+    font-size: 0.9rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0 0.75rem;
+    color: var(--text-muted);
+}
+
+/* выпадающее меню */
+.budgetType__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-card);
+    margin-top: 0.5rem;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* кнопки в меню */
+.budgetType__dropdown .controls__btn {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+    padding: 0.75rem 1rem;
+    justify-content: flex-start;
+    font-size: 0.8rem;
+}
+
+.budgetType__dropdown .controls__btn:last-child {
+    border-bottom: none;
+}
+
+.budgetType__dropdown .controls__btn:hover {
+    background-color: var(--bg-color);
+}
+
+/* выбранное */
+.budgetType__dropdown .controls__btn.active {
+    background-color: var(--bg-color);
+    font-weight: bold;
+    color: var(--color-blue);
+}

@@ -1,0 +1,18 @@
+.info-block__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+}
+
+.info-block__label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.info-block__value {
+    font-weight: 700;
+    font-size: 1.05rem;
+    font-variant-numeric: tabular-nums;
+}
